@@ -1,7 +1,7 @@
 #ifndef IEXPERIMENTALDEVICE_H
 #define IEXPERIMENTALDEVICE_H
 
-class IExperimentalDevice
+class IDeviceIO
 {
 public:
     virtual bool InitDevice () = 0;
@@ -10,7 +10,7 @@ public:
     virtual unsigned char* ReceiveDeviceAnsver () = 0;
     virtual unsigned char* RequestQuery        (const char* Query) = 0;
 
-    virtual ~IExperimentalDevice() { }
+    virtual ~IDeviceIO() { }
 };
 
 #endif // IEXPERIMENTALDEVICE_H

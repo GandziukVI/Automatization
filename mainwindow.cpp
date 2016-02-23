@@ -1,10 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "VisaDevice/includes/iexperimentaldevice.h"
-#include "VisaDevice/includes/visadevice.h"
+#include "DeviceIO/includes/tests.h"
 
-#include "VisaDevice/includes/tests.h"
+#include "Math/FFT.h"
+#include <time.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

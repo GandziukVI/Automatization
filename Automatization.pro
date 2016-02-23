@@ -16,15 +16,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
 
 HEADERS  += mainwindow.h \
-    VisaDevice/includes/visadevice.h \
-    VisaDevice/includes/iexperimentaldevice.h \
-    VisaDevice/includes/tests.h
+    DeviceIO/includes/VisaDevice.h \
+    DeviceIO/includes/IDeviceIO.h \
+    DeviceIO/includes/tests.h \
+    DeviceIO/includes/ISourceMeterUnit.h \
+    DeviceIO/includes/Definitions.h \
+    Math/FFT.h
 
 FORMS    += mainwindow.ui
 
-win32: LIBS += -L$$PWD/VisaDevice/includes/Visa/lib/ -lvisa32
+win32: LIBS += -L$$PWD/DeviceIO/includes/Visa/lib/ -lvisa32
 
-#win32: LIBS += "C:/Users/v.handziuk/Documents/GitHub/Automatization/VisaDevice/includes/Visa/lib/visa64.lib"
-
-INCLUDEPATH += $$PWD/VisaDevice/includes/Visa/include
-DEPENDPATH += $$PWD/VisaDevice/includes/Visa/include
+INCLUDEPATH += $$PWD/DeviceIO/includes/Visa/include
+DEPENDPATH += $$PWD/DeviceIO/includes/Visa/include

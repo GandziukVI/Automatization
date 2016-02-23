@@ -1,7 +1,7 @@
 #ifndef VISADEVICE_H
 #define VISADEVICE_H
 
-#include "iexperimentaldevice.h"
+#include "IDeviceIO.h"
 
 #include <visa.h>
 #include <visatype.h>
@@ -13,7 +13,7 @@
 #define readBufferCount 1048576
 #define connectionTimeout 120000
 
-class VisaDevice : public IExperimentalDevice
+class VisaDevice : public IDeviceIO
 {
 public:
     VisaDevice(const char* VisaID)
