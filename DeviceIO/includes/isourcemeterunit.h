@@ -6,8 +6,8 @@
 class ISourceMeterUnit
 {
 public:
-    virtual void Initialize (IDeviceIO Driver) = 0;
-    virtual void Initialize (IDeviceIO Driver, const char* channelID) = 0;
+    virtual void Initialize (IDeviceIO& Driver) = 0;
+    virtual void Initialize (IDeviceIO& Driver, const char* channelID) = 0;
 
     virtual void SwitchON () = 0;
     virtual void SwitchOFF () = 0;

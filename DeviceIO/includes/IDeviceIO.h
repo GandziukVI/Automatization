@@ -4,6 +4,8 @@
 class IDeviceIO
 {
 public:
+    IDeviceIO () { }
+
     virtual bool InitDevice () = 0;
     virtual bool SendCommandRequest            (const char* RequestString) = 0;
 

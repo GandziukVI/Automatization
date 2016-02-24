@@ -21,7 +21,13 @@ HEADERS  += mainwindow.h \
     DeviceIO/includes/tests.h \
     DeviceIO/includes/ISourceMeterUnit.h \
     DeviceIO/includes/Definitions.h \
-    Math/FFT.h
+    Math/FFT.h \
+    Keithley26xx/Keithley26xx.h \
+    Keithley26xx/SupportedModels.h \
+    Keithley26xx/Keithley26xxChannelBase.h \
+    Keithley26xx/Keithley26xxDefinitions.h \
+    Keithley26xx/Display/Keithley26xx_Display.h \
+    Keithley26xx/Display/Keithley26xxSmuX.h
 
 FORMS    += mainwindow.ui
 
