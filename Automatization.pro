@@ -27,7 +27,9 @@ HEADERS  += mainwindow.h \
     Keithley26xx/Keithley26xxChannelBase.h \
     Keithley26xx/Keithley26xxDefinitions.h \
     Keithley26xx/Display/Keithley26xx_Display.h \
-    Keithley26xx/Display/Keithley26xxSmuX.h
+    Keithley26xx/Display/Keithley26xxSmuX.h \
+    Keithley26xx/Display/Keithley26xxLimit.h \
+    Keithley26xx/Display/Keithley26xxMeasure.h
 
 FORMS    += mainwindow.ui
 

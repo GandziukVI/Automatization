@@ -9,13 +9,13 @@ enum Keithley26xxAvailableChannels
     USER = 3
 };
 
-enum Keithley26xxBLimitFunctions
+enum Keithley26xxLimitFunctions
 {
     LIMIT_IV = 0,
     LIMIT_P = 1
 };
 
-enum Keithley26xxBMeasureFunctions
+enum Keithley26xxMeasureFunctions
 {
     MEASURE_DCAMPS = 0,
     MEASURE_DCVOLTS = 1,

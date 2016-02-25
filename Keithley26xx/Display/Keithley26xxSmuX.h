@@ -5,6 +5,9 @@
 
 #include "../../DeviceIO/includes/IDeviceIO.h"
 
+#include "Keithley26xxLimit.h"
+#include "Keithley26xxMeasure.h"
+
 class Keithley26xxSmuX
 {
 public:
@@ -15,6 +18,19 @@ public:
         int len = strlen(channelID);
         _channelID = new const char* [len];
         strncpy(_channelID, channelID, len);
+
+        limit = new Keithley26xxLimit(Driver, channelID);
+        measure = new Keithley26xxMeasure(Driver, channelID);
+    }
+
+    Keithley26xxLimit getLimit() const
+    {
+        return limit;
+    }
+
+    Keithley26xxMeasure getMeasure() const
+    {
+        return measure;
     }
 
     ~Keithley26xxSmuX()
@@ -23,11 +39,19 @@ public:
             delete _driver;
         if(_channelID)
             delete _channelID;
+
+        if(limit)
+            delete limit;
+        if(measure)
+            delete measure;
     }
 
 private:
     IDeviceIO* _driver;
     const char* _channelID;
+
+    Keithley26xxLimit* limit;
+    Keithley26xxMeasure* measure;
 };
 
 #endif // KEITHLEY26XXSMUX_H
